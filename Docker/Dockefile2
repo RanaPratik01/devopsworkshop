@@ -1,0 +1,4 @@
+#This is a sample Image of Centos
+FROM centos:latest
+ENTRYPOINT echo "Hi"
+
