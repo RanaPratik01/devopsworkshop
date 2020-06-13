@@ -1,0 +1,148 @@
+ git --version
+    2  mkdir dockerpratice
+    3  git clone it clone
+    4  git clone https://github.com/RanaPratik01/devopsworkshop.git
+    5  ls
+    6  cp -r devopsworkshop dockerpratice/
+    7  ls
+    8  cd dockerpratice/
+    9  ls
+   10  cd ..
+   11  rm -rf devopsworkshop/.git
+   12  ls
+   13  rm devopsworkshop/
+   14  rm -rf devopsworkshop/
+   15  ls
+   16  cd dockerpratice/
+   17  ls
+   18  cd dev
+   19  cd devopsworkshop/
+   20  ls
+   21  cd..
+   22  cd ..
+   23  mkdir docker
+   24  ls
+   25  cd devopsworkshop/
+   26  ls
+   27  cp Docker/ /root/dockerpratice/docker/
+   28  cp Docker/ /root/dockerpratice/docker
+   29  cp Docker /root/dockerpratice/docker
+   30  cp -r Docker/* /root/dockerpratice/docker/
+   31  cd ..
+   32  ls
+   33  cd docker/
+   34  ls
+   35  docker --version
+   36  docker images
+   37  docker run -dit --name centos-dev centos
+   38  docker ps -a
+   39  docker images
+   40  docker tag 470671670cac centos/dev:v1.6.14
+   41  docker images
+   42  docker tag 470671670cac centos:v1.6.14
+   43  docker images
+   44  docker run -dit --name centos-qa centos
+   45  docker ps -a
+   46  ls
+   47  cd dockerpratice/
+   48  ls
+   49  cd docker/
+   50  ls
+   51  docker ps -a
+   52  docker images
+   53  docker inspect
+   54  docker ps -a
+   55  docker inspect centos-dev
+   56  docker inspect centos-qa
+   57  docker network inspect bridge
+   58  docker network ls
+   59  docker images
+   60  docker ps
+   61  docker network create pratikdockernetwork
+   62  docker bridge
+   63  docker network ls
+   64  docker network inspect bridge
+   65  docker network inspect pratikdockernetwork
+   66  docker run -dit --name pratiknetcentos-dev centos
+   67  docker run -dit --name pratiknetcentos-qa centos
+   68  docker ps -a
+   69  docker network connect pratikdockernetwork
+   70  docker network connect pratikdockernetwork pratiknetcentos-dev
+   71  docker network connect pratikdockernetwork pratiknetcentos-qa
+   72  docker network inspect pratikdockernetwork
+   73  docker exec -ti pratiknetcentos-dev ping pratiknetcentos-qa
+   74  docker network ls
+   75  systemctl status httpd
+   76  docker ps -a
+   77  docker logs centos-qa
+   78  docker events
+   79  docker system df
+   80  docker logs centos-qa
+   81  docker ps -a
+   82  docker images
+   83  docker ps
+   84  docker ps -a
+   85  docer start centos-dev
+   86  docker start centos-dev
+   87  docker start centos-qa
+   88  docker start pratiknetcentos-dev
+   89  docker start pratiknetcentos-qa
+   90  docker ps
+   91  docker network inspect pratikdockernetwork
+   92  hostname docker
+   93  exit
+   94  ls
+   95  cd dockerpratice/
+   96  ls
+   97  cd docker/
+   98  ls
+   99  docker network ls
+  100  docker network inspect pratikdockernetwork
+  101  docker network ls
+  102  docker network inspect bridge
+  103  docker network inspect pratikdockernetwork
+  104  docker --version
+  105  docker help swarm
+  106  cd /etc/docker/daemon.json
+  107  docker run -dit -p 8081:80 httpd
+  108  docker ps -a
+  109  docker rename unruffled_colden swarmhttpd
+  110  docker ps -a
+  111  service statud httpd
+  112  service status httpd
+  113  systemctl status httpd
+  114  docker run -dit --name test -p 8083:80 httpd
+  115  docker ps -a
+  116  docker swarm init
+  117  docker node ls
+  118  docker swarm init
+  119  netstat -tulpn | grep docker
+  120  docker node ls
+  121  hostname dockerhost1
+  122  exit
+  123  ls
+  124  cd dockerpratice/
+  125  cd docker/
+  126  ls
+  127  docker node ls
+  128  docker network ls
+  129  docker images
+  130  docker ps -a
+  131  docker network ls
+  132  docker network create -d overlay overnet
+  133  docker network ls
+  134  docker service create --name java -- network overnet --replicas 2 \
+  135  docker service create --name java --network overnet \ --replicas 2 \
+  136  docker service create --name java
+  137  docker service create --name java --network overnet --replicas 2
+  138  docker service
+  139  docker service create --name java --network overnet --replicas 2 java
+  140  docker service create --name java --network overnet --replicas 2 jenkins
+  141  docker service create --name jenkinservice --network overnet  --replicas 2  jenkins
+  142*
+  143  docker network ls
+  144  docker network inspect overnet
+  145  git status
+  146  cd ..
+  147  ls
+  148  cd docker
