@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: httpd1
+  name: httpd1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd1
+  template:
+    metadata:
+      labels:
+        app: httpd1
+    spec:
+      containers:
+      - image: httpd
+        name: httpd
+      nodeSelector:
+        disktype: ssd
